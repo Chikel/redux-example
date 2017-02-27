@@ -1,2 +1,2 @@
 # redux-example
-Playnig with Redux and Angular2
+Playing with Redux and Angular2
