@@ -1,0 +1,13 @@
+<div class="task-add">
+  <input type="text" [(ngModel)]="taskLabel" (keyup.enter)="notifyTaskAdded()">
+  <button (click)="notifyTaskAdded()">Add</button>
+</div>
+
+<div class="tasks-container">
+  <app-task *ngFor="let task of currentTasks"
+            [task]="task"
+            [runningTaskId]="runningTaskId"
+            (taskToggled)="notifyTaskToggled($event)"></app-task>
+</div>
+
+<div>Total: {{totalTime | duration}}</div>

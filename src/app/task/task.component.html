@@ -1,0 +1,6 @@
+<div class="task-info label">{{task.label}}</div>
+<div class="task-info timer">{{task.value | duration}}</div>
+<div class="button">
+  <i class="icon-pause2" *ngIf="isTaskRunning()" (click)="toggleTask()"></i>
+  <i class="icon-play3" *ngIf="!isTaskRunning()" (click)="toggleTask()"></i>
+</div>
